@@ -1,17 +1,15 @@
 {
-  "id": "plugin.com.pot-app.ocrspace",
+  "id": "plugin.com.pot-app.paddle-vl",
   "plugin_type": "recognize",
   "icon": "icon.png",
-  "display": "OCR Space",
-  "homepage": "https://github.com/pot-app/pot-app-recognize-plugin-template",
+  "display": "PaddleOCR-VL",
+  "homepage": "https://github.com/gulu/pot-app-recognize-plugin-paddle-vl",
   "needs": [
     {
-      "key": "engine",
-      "display": "Engine",
-      "type": "select",
-      "options": { "1": "Engine 1", "2": "Engine 2", "3": "Engine 3" }
-    },
-    { "key": "apikey", "display": "Api Key", "type": "input" }
+      "key": "service_url",
+      "display": "Service URL",
+      "type": "input"
+    }
   ],
   "language": {
     "auto": "eng",

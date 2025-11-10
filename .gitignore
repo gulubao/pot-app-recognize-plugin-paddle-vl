@@ -1,0 +1,9 @@
+.serena
+docs/*.md
+.cursorignore
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+TODO.md
+plugin.com.pot-app.paddle-vl.zip
+plugin.com.pot-app.paddle-vl.potext

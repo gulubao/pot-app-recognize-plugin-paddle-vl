@@ -62,10 +62,11 @@ return "result";
 
 2. 将文件重命名为`<插件id>.potext`，例如`plugin.com.pot-app.ocrspace.potext`,即可得到 pot 需要的插件。
 
-## 自动编译打包
+```bash
+zip plugin.com.pot-app.paddle-vl.zip main.js info.json icon.png
+mv plugin.com.pot-app.paddle-vl.zip plugin.com.pot-app.paddle-vl.potext
+```
 
-本仓库配置了 Github Actions，可以实现推送后自动编译打包插件。
+### 5. 启动本地服务
 
-每次将仓库推送到 GitHub 之后 actions 会自动运行，将打包好的插件上传到 artifact，在 actions 页面可以下载
-
-每次提交 Tag 之后，actions 会自动运行，将打包好的插件上传到 release，在 release 页面可以下载打包好的插件
+https://www.paddleocr.ai/latest/version3.x/pipeline_usage/PaddleOCR-VL.html#41-docker-compose
