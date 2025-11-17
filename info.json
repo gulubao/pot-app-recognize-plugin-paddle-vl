@@ -7,7 +7,17 @@
   "needs": [
     {
       "key": "service_url",
-      "display": "Service URL",
+      "display": "OpenAI Base URL (e.g., http://localhost:8001)",
+      "type": "input"
+    },
+    {
+      "key": "model_name",
+      "display": "Model Name (e.g., PaddlePaddle/PaddleOCR-VL)",
+      "type": "input"
+    },
+    {
+      "key": "api_key",
+      "display": "API Key (if required)",
       "type": "input"
     }
   ],

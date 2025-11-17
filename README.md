@@ -70,3 +70,20 @@ mv plugin.com.pot-app.paddle-vl.zip plugin.com.pot-app.paddle-vl.potext
 ### 5. 启动本地服务
 
 https://www.paddleocr.ai/latest/version3.x/pipeline_usage/PaddleOCR-VL.html#41-docker-compose
+
+启动paddle ocr 服务, 去A6000服务器上运行.
+[PaddleOCR-VL Usage Guide](https://docs.vllm.ai/projects/recipes/en/latest/PaddlePaddle/PaddleOCR-VL.html)
+
+```zsh
+cd ~/vllm
+source .venv/bin/activate
+vllm serve PaddlePaddle/PaddleOCR-VL \
+    --trust-remote-code \
+    --max-num-batched-tokens 16384 \
+    --no-enable-prefix-caching \
+    --mm-processor-cache-gb 0 \
+    --port 8001 # 默认8000
+```
+
+In Pot-App, edit the plugin configuration so service_url is just the base host (for example
+`http://100.107.165.124:8001`); do not include `/layout-parsing`.
